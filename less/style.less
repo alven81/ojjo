@@ -1,0 +1,312 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy Medium'), local('Gilroy-Medium'),
+      url('../fonts/Gilroy-Medium.woff2') format('woff2'),
+      url('../fonts/Gilroy-Medium.woff') format('woff'),
+      url('../fonts/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy Regular'), local('Gilroy-Regular'),
+      url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+      url('../fonts/Gilroy-Regular.woff') format('woff'),
+      url('../fonts/Gilroy-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+      url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
+      url('../fonts/Gilroy-Semibold.woff') format('woff'),
+      url('../fonts/Gilroy-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@bgBodyColor: #ffffff;
+@bgColorDarkContainer: #ffffff;                    //bg of DARK color container
+@bgImageDarkContainer: url(../img/back_layer.svg);   //bg pic of DARK color container
+@bgFontColorDarkContainer: #ffffff;                //font color of DARK color container
+@bgColorLightContainer: #ffffff;                   //bg of LIGHT color container
+@bgFontColorLightContainer: #000000;               //font color of LIGHT color container
+@mainLinkColor: #ffffff;                           //nav menu link color
+@mainLinkTextDec: none;                              //nav menu link decoration
+@mainLinkTransitionEff: all 0.4s ease;               //nav menu and all buttons transition effect
+@aWhiteHover: rgba(255, 255, 255, 0.5);            //nav menu hover
+@aWhiteFocus: rgba(255, 255, 255, 1);              //nav menu focus
+@aWhiteActive: rgba(109, 108, 108, 0.493);         //nav menu active
+
+.darkContainer {
+    background-color: @bgColorDarkContainer;
+    background-image: @bgImageDarkContainer;
+    color: @bgFontColorDarkContainer;
+}
+
+.lightContainer {
+    background-color: @bgColorLightContainer;
+    color: @bgFontColorLightContainer;
+}
+
+.aWhite {
+    color: @mainLinkColor;
+    text-decoration: @mainLinkTextDec;
+    transition: @mainLinkTransitionEff;
+    &:hover {
+        color: @aWhiteHover;
+    }
+    &:focus {
+        color: @aWhiteFocus;
+    }
+    &:active {
+        color: @aWhiteActive;
+    }
+}
+
+.button {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 51px;
+    padding: 14px 30px 0;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: @mainLinkTransitionEff;
+    &--white {
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        color: black;
+        &:hover {
+            background-color: #333333;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+        }
+    }
+    &--dark {
+        background-color: #333333;
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        &:hover {
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            color: black;
+        }
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Gilroy, sans-serif;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: @bgBodyColor;
+}
+
+h1 {
+    font-family: 'Noto Serif', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 49px;
+}
+
+h2 {
+    font-family: 'Noto Serif', serif;
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 41px;
+    margin-bottom: 45px;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 30px;
+    margin: 100px 0 15px;
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    .lightContainer;
+}
+
+.container-dark {
+    width: 100%;
+    text-align: center;
+    .darkContainer;
+}
+
+.header__main {
+    width: 100%;
+    background: linear-gradient(0deg, rgba(51, 51, 51, 0.87), rgba(51, 51, 51, 0.87)), url(../img/header_background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    text-align: center;
+    color: white;
+    &--border {
+        border-bottom: 1px solid #ffffff;
+    }
+    .header__button {
+        margin: 50px auto 80px;
+    }
+}
+
+.header-nav__main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 520px;
+    &__block {
+        display: flex;
+        gap: 40px;
+    }
+    &--loupe {
+        position: relative;
+        a::before {
+            left: -25px;
+            position: absolute;
+            content: url(../img/loupe.svg);
+            text-align: center;
+        }
+    }
+    &--logo {
+        margin: 25px 128px;
+    }
+}
+
+.brands__main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1110px;
+    margin: 0 auto;
+    min-height: 120px;
+    div {
+        border-right: 1px solid #ffffff;
+            &:last-child {
+            border-right: none;
+        }
+        a img:hover {
+            transition: @mainLinkTransitionEff;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.events__form {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    div {
+        position: relative;
+        width: 165px;
+        height: 55px;
+        border: 1px solid #d6d6d6;
+        background-color: #ffffff;
+        label {
+            position: absolute;
+            padding-top: 16px;
+            text-align:center;
+            border: 1px solid #d6d6d6;
+            display: inline-block;
+            box-sizing: border-box;
+            width: 165px;
+            height: 55px;
+            left: -7px;
+            bottom: 5px;
+            cursor: pointer;
+            background-color: #ffffff;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: @mainLinkTransitionEff;
+        }
+        input:checked + label {
+                padding-top: 18px;
+                border: 1px solid #333333;
+                width: 170px;
+                height: 60px;
+                left: -4px;
+                bottom: -1px;
+                background-color: #333333;
+                color: white;
+        }
+    }
+}
+
+
+
+
+.events__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    margin: 55px 0 120px;
+    div {
+        box-sizing: border-box;
+        height: 280px;
+        width: 350px;
+        text-align: center;
+        padding-top: 222px;
+        a {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        &:nth-child(1) {
+            background-image: url(../img/rings.jpg);
+        }
+        &:nth-child(2) {
+            background-image: url(../img/earings.jpg);
+        }
+        &:nth-child(3) {
+            background-image: url(../img/necklages.jpg);
+        }
+        &:nth-child(4) {
+            background-image: url(../img/studs.jpg);
+        }
+        &:nth-child(5) {
+            background-image: url(../img/bracelet.jpg);
+        }
+        &:nth-child(6) {
+            background-image: url(../img/watches.jpg);
+        }
+    }
+}
+
+
+
+
+.gallery_items {
+
+    display: flex;
+    flex-wrap: wrap;
+    img {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+}
