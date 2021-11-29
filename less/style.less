@@ -67,6 +67,21 @@
     }
 }
 
+.aWhiteImg {
+    color: @mainLinkColor;
+    text-decoration: @mainLinkTextDec;
+    transition: @mainLinkTransitionEff;
+    &:hover {
+        transform: scale(1.05);
+    }
+    &:focus {
+        transform: scale(1.05);
+    }
+    &:active {
+        transform: scale(1.05);
+    }
+}
+
 .button {
     display: inline-block;
     box-sizing: border-box;
@@ -143,6 +158,7 @@ h3 {
 }
 
 .container-dark {
+    display: inline-block;
     width: 100%;
     text-align: center;
     .darkContainer;
@@ -210,7 +226,8 @@ h3 {
 
 .events__form {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 18px;
     div {
         position: relative;
@@ -231,9 +248,7 @@ h3 {
             bottom: 5px;
             cursor: pointer;
             background-color: #ffffff;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 22px;
+            font: 500 18px/22px Gilroy, sans-serif;
             letter-spacing: 0.1em;
             text-transform: uppercase;
             transition: @mainLinkTransitionEff;
@@ -251,62 +266,119 @@ h3 {
     }
 }
 
-
-
-
 .events__items {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-items: center;
+    grid-gap: 30px;
     margin: 55px 0 120px;
-    div {
+    a {
         box-sizing: border-box;
         height: 280px;
         width: 350px;
         text-align: center;
         padding-top: 222px;
-        a {
-            font-weight: 500;
-            font-size: 24px;
-            line-height: 29px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: #ffffff;
-        }
+        font: 500 24px/29px Gilroy, sans-serif;     
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #ffffff;
+        
         &:nth-child(1) {
-            background-image: url(../img/rings.jpg);
+            background: linear-gradient(180deg, rgba(180, 180, 180, 0) 20.31%, #333333 100%), url(../img/rings.jpg);
         }
         &:nth-child(2) {
-            background-image: url(../img/earings.jpg);
+            background: linear-gradient(180deg, rgba(180, 180, 180, 0) 20.31%, #333333 100%), url(../img/earings.jpg);
         }
         &:nth-child(3) {
-            background-image: url(../img/necklages.jpg);
+            background: linear-gradient(180deg, rgba(180, 180, 180, 0) 20.31%, #333333 100%), url(../img/necklages.jpg);
         }
         &:nth-child(4) {
-            background-image: url(../img/studs.jpg);
+            background: linear-gradient(180deg, rgba(180, 180, 180, 0) 20.31%, #333333 100%), url(../img/studs.jpg);
         }
         &:nth-child(5) {
-            background-image: url(../img/bracelet.jpg);
+            background: linear-gradient(180deg, rgba(180, 180, 180, 0) 20.31%, #333333 100%), url(../img/bracelet.jpg);
         }
         &:nth-child(6) {
-            background-image: url(../img/watches.jpg);
+            background: linear-gradient(180deg, rgba(180, 180, 180, 0) 20.31%, #333333 100%), url(../img/watches.jpg);
         }
+        .aWhiteImg;
     }
 }
 
-
-
-
-.gallery_items {
-
+.gallery__items {
     display: flex;
     flex-wrap: wrap;
-    img {
-        margin: 0;
-        padding: 0;
-        border: 0;
+    justify-content: center;
+    margin-bottom: 150px;
+    a {
+        max-width: 555px;
+        max-height: 300px; 
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
+    .gallery__items--big {
+        position: relative;
+    }
+    .gallery__items--big::before {
+        position: absolute;
+        content: url(../img/play.svg);
+        width: 50%;
+        margin: auto;
+        top: 50%; left: 65%;
+        transform: translate(-50%,-50%);
+    }
+}
 
+.our-salon--text {
+    display: inline-block;
+    max-width: 730px;
+    font: 400 18px/25px Gilroy, sans-serif;
+}
+
+.our-salon__button--margin {
+    margin: 60px 0 100px;
+}
+
+.blog__main {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+        a {
+            display: block;
+            box-sizing: border-box;
+            height: 370px;
+            width: 350px;
+            font: 400 21px/30px Gilroy, sans-serif;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            padding: 248px 72px 35px;
+            &:nth-child(1) {
+                background-repeat: no-repeat;
+                background: linear-gradient(180deg, rgba(180, 180, 180, 0) 0%, #333333 100%), url(../img/square_watch.jpg);
+            }
+            &:nth-child(2) {
+                background-repeat: no-repeat;
+                background: linear-gradient(180deg, rgba(180, 180, 180, 0) 0%, #333333 100%), url(../img/square_studs.jpg);
+            }
+            &:nth-child(3) {
+                background-repeat: no-repeat;
+                background: linear-gradient(180deg, rgba(180, 180, 180, 0) 0%, #333333 100%), url(../img/square_rings.png);
+            }
+            .aWhiteImg;
+        }
+}
+
+.blog__button--margin {
+    text-align: center;
+    margin: 60px auto 0;
 }
