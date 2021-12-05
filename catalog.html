@@ -11,7 +11,7 @@
         <title>OJJO</title>
     </head>
     <body>
-        <header class="header__main header__main--logo">
+        <header class="header__main"> <!-- Deleted class - header__main--logo -->
             <div class="header__main--border">
                 <nav class="header-nav__main">
                     <div class="header-nav__main__block">
@@ -27,57 +27,185 @@
                         <div><a href="##"><img src="./img/heart.svg" alt="Избранное"></a></div>
                     </div>
                 </nav>
-                <!-- MEDIA NAV WITHOWT WRAPPER -->
-                <nav class="header-nav__media--logo">
-                        <a href="index.html">
-                            <img src="./img/logo.svg" alt="Логотип OJJO">
-                        </a>
-                        <div>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                </nav>
-                <!-- WRAPPER FOR MEDIA NAV -->
-                <section class="nav_wrapper">
-                    <div class="nav_wrapper__media__links">
-                        <div><a class="header-nav--media__link" href="##">Контрагентам</a></div>
-                        <div><a class="header-nav--media__link" href="##">Дизайнерам</a></div>
-                        <div><a class="header-nav--media__link" href="##">Вакансии</a></div>
-                        <div><a class="header-nav--media__link" href="##">Вход/Регистрация</a></div>
-                    </div>
-                    <span class="nav_wrapper__span"></span>
-                    <div class="nav_wrapper__media__pics">                        
-                        <div><a href="##"><img src="./img/man.svg" alt="Настройки пользователя"></a></div>
-                        <div><a href="##"><img src="./img/heart.svg" alt="Избранное"></a></div>
-                    </div>
-                    <span class="nav_wrapper__span"></span>
-                    <div class="nav_wrapper__media--social">
-                        <a target="_blank" href="https://youtube.com"><img src="./img/youtube_white.svg" alt="Мы в Ютьюб"></a>
-                        <a target="_blank" href="https://vk.com"><img src="./img/vk_white.svg" alt="Мы Вконтакте"></a>
-                        <a target="_blank" href="https://facebook.com"><img src="./img/facebook_white.svg" alt="Мы в Фейсбук"></a>
-                        <a target="_blank" href="https://telegram.org/"><img src="./img/telegram_white.svg" alt="Мы в Телеграмм"></a>
-                        <a target="_blank" href="##"><img src="./img/e_white.svg"></a>
-                    </div>
-                </section>
-
-
-                <h1>Долго, дорого, богато!</h1>
-                <div class="header__button"><a class="button button--dark" href="catalog.html">Каталог изделий</a></div>
+                                <!-- MEDIA NAV WITHOWT WRAPPER -->
+                                <nav class="header-nav__media--logo">
+                                    <a href="index.html">
+                                        <img src="./img/logo.svg" alt="Логотип OJJO">
+                                    </a>
+                                    <div>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                            </nav>
+                            <!-- WRAPPER FOR MEDIA NAV -->
+                            <section class="nav_wrapper">
+                                <div class="nav_wrapper__media__links">
+                                    <div><a class="header-nav--media__link" href="##">Контрагентам</a></div>
+                                    <div><a class="header-nav--media__link" href="##">Дизайнерам</a></div>
+                                    <div><a class="header-nav--media__link" href="##">Вакансии</a></div>
+                                    <div><a class="header-nav--media__link" href="##">Вход/Регистрация</a></div>
+                                </div>
+                                <span class="nav_wrapper__span"></span>
+                                <div class="nav_wrapper__media__pics">                        
+                                    <div><a href="##"><img src="./img/man.svg" alt="Настройки пользователя"></a></div>
+                                    <div><a href="##"><img src="./img/heart.svg" alt="Избранное"></a></div>
+                                </div>
+                                <span class="nav_wrapper__span"></span>
+                                <div class="nav_wrapper__media--social">
+                                    <a target="_blank" href="https://youtube.com"><img src="./img/youtube_white.svg" alt="Мы в Ютьюб"></a>
+                                    <a target="_blank" href="https://vk.com"><img src="./img/vk_white.svg" alt="Мы Вконтакте"></a>
+                                    <a target="_blank" href="https://facebook.com"><img src="./img/facebook_white.svg" alt="Мы в Фейсбук"></a>
+                                    <a target="_blank" href="https://telegram.org/"><img src="./img/telegram_white.svg" alt="Мы в Телеграмм"></a>
+                                    <a target="_blank" href="##"><img src="./img/e_white.svg"></a>
+                                </div>
+                            </section>
+                <!-- <h1>Долго, дорого, богато!</h1>
+                <div class="header__button"><a class="button button--dark" href="##">Каталог изделий</a></div> -->
             </div>
             <!-- Brands -->
-            <div class="brands__main">
+            <!-- <div class="brands__main">
                 <div><a href="##"><img src="./img/coco_fine.svg" alt="Бренд"></a></div>
                 <div><a href="##"><img src="./img/coco_fine.svg" alt="Бренд"></a></div>
                 <div><a href="##"><img src="./img/coco_fine.svg" alt="Бренд"></a></div>
                 <div><a href="##"><img src="./img/coco_fine.svg" alt="Бренд"></a></div>
                 <div><a href="##"><img src="./img/coco_fine.svg" alt="Бренд"></a></div>
                 <div><a href="##"><img src="./img/coco_fine.svg" alt="Бренд"></a></div>
-            </div>
+            </div> -->
         </header>
         <main>
-            <!-- Events -->
-            <section class="events__main container">
+
+        <!-- Filter List -->
+
+        <section class="filter-list__main filter-list__main--name container">
+                <select required class="filter-list__brand">
+                        <option value="" disabled selected>Бренд</option>
+                        <option value="1">Harry Winston</option>
+                        <option value="2">Buccellati</option>
+                        <option value="3">Van Cleef & Arpels</option>
+                        <option value="4">Graff</option>
+                        <option value="5">Tiffany & Co.</option>
+                        <option value="6">Piaget</option>
+                        <option value="7">Cartier</option>
+                        <option value="8">Chopard</option>
+                        <option value="9">Bvlgari</option>
+                        <option value="10">Mikimoto</option>
+                </select>
+                <select required class="filter-list__price">
+                    <option value="" disabled selected>Цена</option>
+                    <option value="1">1...50</option>
+                    <option value="2">50...100</option>
+                    <option value="3">100...500</option>
+                    <option value="4">500...1 000</option>
+                    <option value="5">1 000...5 000</option>
+                    <option value="6">5 000...10 000</option>
+                    <option value="7">10 000...50 000</option>
+                </select>
+                <select required class="filter-list__gender">
+                    <option value="" disabled selected>Для кого</option>
+                    <option value="1">Мужу</option>
+                    <option value="2">Жене</option>
+                    <option value="3">Партнёру</option>
+                </select>
+                <select required class="filter-list__collection">
+                    <option value="" disabled selected>Коллекция</option>
+                    <option value="1">Долго</option>
+                    <option value="2">Дорого</option>
+                    <option value="3">Богато</option>
+                </select>
+                <select required class="filter-list__season">
+                    <option value="" disabled selected>Сезон</option>
+                    <option value="1">Весна</option>
+                    <option value="2">Лето</option>
+                    <option value="3">Осень</option>
+                    <option value="3">Зима</option>
+                </select>
+                <select required class="filter-list__event">
+                    <option value="" disabled selected>Событие</option>
+                    <option value="1">Свадьба</option>
+                    <option value="2">День рождения</option>
+                    <option value="3">Праздник</option>
+                    <option value="3">Хорошее настроение</option>
+                </select>
+        </section>
+        <section class="product-card__main container">
+            <div>
+                <img src="./img/three-rings.jpg" alt="Подвеска">
+                <h4>Подвеска</h4>
+                <p>Dolce & Gabanna</p>
+                <a href="##" class="button button--dark">175 000 &#8381;</a>
+            </div>
+            <div>
+                <img src="./img/three-rings.jpg" alt="Подвеска">
+                <h4>Подвеска</h4>
+                <p>Dolce & Gabanna</p>
+                <a href="##" class="button button--dark">175 000 &#8381;</a>
+            </div>
+            <div>
+                <img src="./img/three-rings.jpg" alt="Подвеска">
+                <h4>Подвеска</h4>
+                <p>Dolce & Gabanna</p>
+                <a href="##" class="button button--dark">175 000 &#8381;</a>
+            </div>
+            <span class="divider"></span>
+        </section>
+       
+        <section class="product-card__main container">
+            <div>
+                <img src="./img/three-rings.jpg" alt="Подвеска">
+                <h4>Подвеска</h4>
+                <p>Dolce & Gabanna</p>
+                <a href="##" class="button button--dark">175 000 &#8381;</a>
+            </div>
+            <div>
+                <img src="./img/three-rings.jpg" alt="Подвеска">
+                <h4>Подвеска</h4>
+                <p>Dolce & Gabanna</p>
+                <a href="##" class="button button--dark">175 000 &#8381;</a>
+            </div>
+            <div>
+                <img src="./img/three-rings.jpg" alt="Подвеска">
+                <h4>Подвеска</h4>
+                <p>Dolce & Gabanna</p>
+                <a href="##" class="button button--dark">175 000 &#8381;</a>
+            </div>
+        </section>
+        <section class="button__main--pos container">
+            <a href="##" class="button button--dark">Покажите ещё</a>
+        </section>
+
+        <!-- SEO -->
+
+        <section class="SEO__main container">
+            <div>
+                <div class="SEO__main--increase SEO__main--height">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, lorem eu commodo porttitor erat. Amet mauris cursus bibendum in egestas. Nulla porttitor amet quam elit, mauris. Tortor egestas dignissim augue suspendisse rutrum pretium lobortis dolor. Commodo sagittis at amet faucibus faucibus id. Bibendum placerat convallis gravida eu quisque et augue. Sed dignissim amet ut vitae at ornare sed.
+                        Commodo sagittis at amet faucibus faucibus id. Bibendum placerat convallis gravida eu quisque et augue. Sed dignissim amet ut vitae at ornare sed.
+                    </p>
+                </div>
+                <div>
+                    <span class="SEO__main--link"><a href="##">читать полностью</a></span>
+                </div>
+            </div>
+            <div class="SEO__main--prefference">
+                <a href="##">
+                    <img src="./img/car.svg">
+                    <span>Бесплатная доставка</span>
+                </a>
+                <a href="##"><img src="./img/notebook.svg">
+                    <span>Индивидуальный дизайн</span>
+                </a>
+                <a href="##"><img src="./img/fit.svg">
+                    <span>Бесплатная примерка</span>
+                </a>
+                <a href="##"><img src="./img/earrings.svg">
+                    <span>Личный подход</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Events -->
+            <!-- <section class="events__main container">
                 <h3>К мероприятиям</h3>
                 <h2>Настоящая красота здесь!</h2>
                 <form id="events_form" method="get" class="events__form">
@@ -108,16 +236,16 @@
                     <a href="##">БРАСЛЕТЫ</a>
                     <a href="##">ЧАСЫ</a>
                 </div>
-            </section>
+            </section> -->
             <!-- Our salon -->
-            <article class="our-salon__main container-dark">
+            <!-- <article class="our-salon__main container-dark">
                 <h3>Не знаете, что выбрать?</h3>
                 <h2>Посетите наши салоны в Москве</h2>
                 <div><p class="our-salon--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut duis tortor vitae pellentesque egestas quam pulvinar. Pellentesque porttitor velit sit pellentesque. Suspendisse donec pretium id dignissim. Dignissim ultrices eget orci viverra. Egestas quis et ut ultrices imperdiet lectus nulla tempus. Pharetra lorem sem purus nisi libero viverra ipsum.</p></div>
                 <a class="button button--white our-salon__button--margin" href="##">Наши салоны</a>
-            </article>
+            </article> -->
             <!-- Blog -->
-            <section class="blog__main container">
+            <!-- <section class="blog__main container">
                 <h3>Полезные статьи</h3>
                 <h2>Лучшие советы по подбору дорогих подарков</h2>
                 <div class="blog__items">
@@ -126,9 +254,9 @@
                     <a href="##">Как выбрать обручальные кольца молодоженам</a>
                 </div>
                 <a class="button button--dark blog__button--margin" href="##">Читать наш блог</a>
-            </section>
+            </section> -->
             <!-- Gallery -->
-            <section class="gallery__main container">
+            <!-- <section class="gallery__main container">
                 <h3>#ojjo_jewerly</h3>
                 <h2>Мы в социальных сетях</h2>
                 <div class="gallery__items">
@@ -139,7 +267,7 @@
                     <a href="##"><img src="./img/soc_watches.png" alt="Часы"></a>
                     <a href="##" class="gallery__items--big"><img src="./img/soc_hands.jpg" alt="Украшения"></a>
                 </div>
-            </section>
+            </section> -->
             <!-- Subscribe -->
             <section class="subscribe__main container-dark">
                 <h3>Полезные советы и персональные предложения</h3>
@@ -204,5 +332,8 @@
                 <div><a target="_blank" href="https://www.figma.com/">Сделано Figma.info</a></div>
             </div>
         </footer>
+        <script type="text/javascript">
+            
+          </script>
     </body>
 </html>
