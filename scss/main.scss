@@ -251,10 +251,17 @@ h3 {
 .header-nav--main__link {
     @include aWhite;
 }
+/////////////////////////////////
+//SWITCH ON NAV_WRAPPER HERE!!!//
+/////////////////////////////////
+// .nav_wrapper {
+//     display: none;
+//     @media (max-width: 375px){
+//         display: none;
+//     }
+// }
 
-//SWITCH ON NAV_WRAPPER HERE!!!
-
-.nav_wrapper {
+.nav_wrapper_off {
     display: none;
 }
 
@@ -293,7 +300,6 @@ h3 {
     }
 }
 
-
 .header-nav__media--logo{
     display: flex;
     justify-content: space-between;
@@ -322,7 +328,6 @@ h3 {
         display: none;
     }
 }
-
 
 .brands__main {
     display: flex;
@@ -701,7 +706,9 @@ h3 {
     justify-content: space-evenly;
     height: 40px;
     @media (max-width: 375px) {
-        margin: 10px auto 10px;
+        margin: 20px auto 10px;
+        gap: 20px;
+        height: inherit;
     }
     select {
         width: 100%;
@@ -711,9 +718,15 @@ h3 {
         border: 0;
         border-bottom: 1px solid grey;
         background-color: inherit;
+        @media (max-width: 375px) {
+            max-width: 100%;
+            height: auto;
+            font: 400 25px/24px Gilroy, sans-serif;
+        }
         option[value=""][disabled] { 
             display: none;
         }
+        
     }
     &:required:invalid { 
     color: #333333;
@@ -746,6 +759,9 @@ h3 {
 
 .product-card__main--bottom {
     margin-bottom: 155px;
+    @media (max-width: 375px){
+        margin-bottom: 10px;
+    }
 }
 
 .divider {
@@ -792,14 +808,27 @@ h3 {
     max-width: 540px;
     font: 400 16px/24px Gilroy, sans-serif;
 }
-    
+
+
+
 .SEO__main--link a{
         @include aDark;
         text-transform: uppercase;
         font-size: 18px;
 }
 
-.SEO__main--height { 
+// .SEO__main--height { 
+//     max-height: 150px;
+//     overflow: hidden;
+//     p {
+//         color: transparent;    
+//         -webkit-background-clip: text;
+//         background-clip: text;
+//         background-image: linear-gradient(180deg, #333333, rgba(255,255,255,1) 100%);
+//     }
+// }
+
+.read_wrap_off {
     max-height: 150px;
     overflow: hidden;
     p {
@@ -845,11 +874,24 @@ h3 {
     min-height: 22px;
     width: 100%;
     margin: 60px 0 50px;
+    @media (max-width: 375px){
+        flex-direction: column;
+        margin: 10px 0 10px;
+    }
     a {
         @include aDark;
+        @media (max-width: 375px){
+            display: block;
+            font: 400 21px/29px Gilroy, sans-serif;
+            text-decoration: none;
+            margin: 20px 20px;
+        }
     }
     span {
         margin: 0 15px;
+        @media (max-width: 375px){
+            display: none;
+        }
     }
 }
 
@@ -864,10 +906,16 @@ h3 {
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-bottom: 120px;
+    @media (max-width: 375px) {
+        margin-bottom: 10px;
+    }
     > div {
         width: 48%;
+        min-width: 350px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        flex-grow: 1;
     }
 }
 
@@ -879,8 +927,13 @@ h3 {
 .product__card--images {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
+    gap:40px;
+    margin: 0 5px 5px 5px;
+    @media (max-width: 375px){
+        gap: 10px;
+    }
     img {
         max-width: 160px;
         height: 120px;
@@ -908,6 +961,11 @@ h3 {
     }
 }
 
+.product__description {
+    margin: 0 5px 5px 5px;
+    //flex-grow: 1;
+}
+
 .product__description--border--inlet {
     padding: 30px;
 }
@@ -932,9 +990,13 @@ h3 {
 .product__description--price {
     font: 600 24px/29px Gilroy, sans-serif;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
+    @media (max-width: 375px){
+        text-align: center;
+    }
 }
 
 .product__description--buttons a {
     margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
 }
